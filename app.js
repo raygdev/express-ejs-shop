@@ -1,7 +1,9 @@
 const express =require('express')
-const { pageNotFound } = require('./controllers/shopController')
-const router = require('./routes/routes')
 const app = express()
+
+const { pageNotFound } = require('./controllers/errorController')
+const shopRouter = require('./routes/shop')
+const adminRouter = require('./routes/admin')
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
@@ -12,7 +14,9 @@ app.use(express.urlencoded({extended:false}))
 
 app.use(express.static('public'))
 
-app.use(router)
+app.use(adminRouter)
+
+app.use(shopRouter)
 
 app.use(pageNotFound)
 
