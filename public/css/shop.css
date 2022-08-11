@@ -1,0 +1,50 @@
+.flex {
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    flex:0 1 250px;
+    grid-template-areas: 
+    'title title title'
+    'desc desc desc'
+    'price price button';
+    grid-template-rows: repeat(3, 75px);
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: .75em;
+}
+
+.grid h2 {
+    grid-area: title;
+    justify-self: center;
+}
+.description {
+    grid-area: desc;
+    align-self: center;
+}
+
+.price {
+    grid-area: price;
+    align-self: center;
+}
+
+.grid button {
+    grid-area: button;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: #593e72;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    padding: .25em .75em;
+
+}

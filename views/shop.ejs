@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs')  %> 
+<link rel="stylesheet" href="/css/shop.css">
+</head>
+<body>
+    <%- include('includes/navigation.ejs')  %> 
+    <h1 class="main-title"><%= content %> </h1>
+<div class="flex">
+    <% products.forEach(product => { %>
+        <div class="grid">
+            <h2><%= product.title %> </h2>
+            <p class="description"><%= product.description %> </p>
+            <p class="price"><%= product.price  %> </p>
+            <button>Add To Cart</button>
+        </div>
+    <% }) %>  
+</div>  
+    
+<%- include('includes/end.ejs') %> 
+

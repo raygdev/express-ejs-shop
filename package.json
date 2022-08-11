@@ -1,0 +1,33 @@
+{
+  "name": "express-ejs-shop",
+  "version": "1.0.0",
+  "description": "using express and ejs with MVC to make a shop",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raygdev/express-ejs-shop.git"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "server",
+    "MVC"
+  ],
+  "author": "Raymond Greeley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raygdev/express-ejs-shop/issues"
+  },
+  "homepage": "https://github.com/raygdev/express-ejs-shop#readme"
+}
