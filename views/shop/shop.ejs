@@ -5,6 +5,10 @@
     <%- include('../includes/navigation.ejs')  %> 
     <h1 class="main-title"><%= content %> </h1>
 <div class="flex">
+    <% if (!products[0]) { %>
+     <h1>Sorry, No Products Here</h1>
+    <% } %>
+     
     <% products.forEach(product => { %>
         <div class="grid">
             <h2><%= product.title %> </h2>
