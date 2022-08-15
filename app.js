@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:false}))
 
 app.use(express.static('public'))
 
-app.use(adminRouter)
+app.use('/admin',adminRouter)
 
 app.use(shopRouter)
 
