@@ -1,6 +1,6 @@
 const Product = require('../models/products')
 
-exports.getShopPage = (req,res,next) => {
+exports.getProductListPage = (req,res,next) => {
      Product.fetchAll( products => {
          res.render('shop/product-list', {
              pageTitle:'shop',
@@ -16,6 +16,25 @@ exports.getCartPage = (req, res, next) => {
         pageTitle: 'Shopping Cart',
         content: 'Shopping Cart',
         path: '/cart'
+    })
+}
+
+exports.getCheckoutPage = (req,res,next) => {
+    res.render('shop/checkout', {
+        content: 'Checkout',
+        pageTitle: "Checkout",
+        path: '/checkout'
+    })
+}
+exports.getIndexPage = (req,res,next) => {
+    console.log('something')
+    next()
+}
+exports.getProductDetailPage = (req,res,next) => {
+    res.render('shop/product-detail', {
+        pageTitle: 'Product Details',
+        content: 'Product Details',
+        path: '/product-detail'
     })
 }
 
