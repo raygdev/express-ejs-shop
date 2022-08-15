@@ -7,7 +7,7 @@ router.get('/admin/add-product', adminController.getAdminAddProduct)
 
 router.post('/admin/add-product', adminController.postAdminAddProduct)
 
-router.get('/admin/remove-product', adminController.getAdminRemoveProduct)
+router.get('/admin/edit-product', adminController.getAdminEditProducts)
 
 router.post('/admin/add-product',adminController.postAdminAddProduct)
 
