@@ -1,5 +1,5 @@
 <%- include('../includes/head.ejs')  %> 
-<link rel="stylesheet" href="/css/shop.css">
+<link rel="stylesheet" href="/css/edit.css">
 </head>
 <body>
     <%- include('../includes/navigation.ejs')  %> 
@@ -14,7 +14,8 @@
             <h2><%= product.title %> </h2>
             <p class="description"><%= product.description %> </p>
             <p class="price"><%= product.price  %> </p>
-            <button>Add To Cart</button>
+            <a href="/admin/remove-product" class="delete">Delete</a>
+            <a href="/admin/edit-product" class="edit">Edit</a>
         </div>
     <% }) %>  
 </div>  

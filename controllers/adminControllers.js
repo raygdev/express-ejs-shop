@@ -26,7 +26,7 @@ exports.getAdminRemoveProduct = (req,res,next) => {
 exports.getAdminEditProducts = (req,res,next) => {
     res.render('admin/edit-products', {
         pageTitle: 'Edit Products',
-        content:'Edit Content',
+        content:'Edit Product',
         path:'/admin/edit-products'
     })
 }
