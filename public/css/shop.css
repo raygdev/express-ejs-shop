@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .flex {
     display: flex;
     width: 95%;
@@ -14,31 +17,35 @@
     grid-template-areas: 
     'title title title'
     'desc desc desc'
-    'price price button';
+    'price price price'
+    'price price price'
+    'details cart cart';
     grid-template-rows: repeat(3, 75px);
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid black;
     padding: 1em;
     margin-bottom: .75em;
+    gap: .5rem;
 }
 
 .grid h2 {
-    grid-area: title;
+    grid-area: auto  / title ;
     justify-self: center;
 }
 .description {
-    grid-area: desc;
-    align-self: center;
+    grid-area: 2 / desc;
+    justify-self: center;
 }
 
 .price {
-    grid-area: price;
-    align-self: center;
+    grid-area: 4 / price;
+    justify-self: center;
 }
 
-.grid button {
-    grid-area: button;
-    cursor: pointer;
+.grid .add,
+.grid .details {
+    text-decoration: none;
+    text-align: center;
     border: 1px solid white;
     border-radius: 3px;
     background-color: #593e72;
@@ -47,4 +54,18 @@
     align-self: center;
     padding: .25em .75em;
 
+}
+
+.details {
+    grid-area: details/details/details;
+}
+
+.add {
+    grid-area: cart;
+}
+
+@media (max-width:590px){
+    .grid{
+        margin: 10px auto;
+    }
 }

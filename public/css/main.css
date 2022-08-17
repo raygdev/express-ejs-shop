@@ -26,22 +26,24 @@ h1, h2, h3 {
 }
 
 .nav {
+    font-size: .8rem;
     flex-basis: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: center;
 }
 
 .nav-list {
     display: flex;
     list-style-type: none;
-    flex-basis: 75%;
-    justify-content: space-evenly;
+    flex-basis: 100%;
+    justify-content: space-between;
 }
 
 .nav-list a {
     color: white;
     text-decoration: none;
     transition: all ease-in-out .5s;
+    padding: .5em 1em;
 }
 
 .nav-list a:hover,

@@ -21,6 +21,7 @@
     border: 1px solid black;
     padding: 1em;
     margin-bottom: .75em;
+    gap: 1rem
 }
 
 .grid h2 {
@@ -56,4 +57,10 @@
 }
 .delete{
     grid-area: dbutton;
+}
+
+@media (max-width:590px){
+    .grid{
+        margin: 10px auto;
+    }
 }

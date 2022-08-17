@@ -31,10 +31,16 @@ exports.getIndexPage = (req,res,next) => {
     next()
 }
 exports.getProductDetailPage = (req,res,next) => {
-    res.render('shop/product-detail', {
-        pageTitle: 'Product Details',
-        content: 'Product Details',
-        path: '/product-detail'
+    let { prodID } = req.params
+    console.log(typeof prodID === 'string')
+    Product.fetchAll(products => {
+    let [singleProd] = products.filter(prod => prod.id === prodID);
+        res.render('shop/product-detail', {
+            pageTitle: 'Product Details',
+            content: singleProd.title + ' Details',
+            path: '/product-detail',
+            product: singleProd
+        })
     })
 }
 

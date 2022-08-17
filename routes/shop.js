@@ -9,7 +9,7 @@ router.get('/cart', shopController.getCartPage)
 
 router.get('/checkout', shopController.getCheckoutPage)
 
-router.get('/product-detail', shopController.getProductDetailPage)
+router.get('/products/:prodID', shopController.getProductDetailPage)
 
 
 
