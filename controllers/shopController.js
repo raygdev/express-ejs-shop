@@ -38,13 +38,12 @@ exports.getIndexPage = (req,res,next) => {
 }
 exports.getProductDetailPage = (req,res,next) => {
     let { prodID } = req.params
-    Product.fetchAll(products => {
-    let [singleProd] = products.filter(prod => prod.id === prodID);
+    Product.findById(prodID, product => {
         res.render('shop/product-detail', {
-            pageTitle: 'Product Details',
-            content: singleProd.title + ' Details',
+            pageTitle: product.title,
+            content:' Details',
             path: '/product-detail',
-            product: singleProd
+            product: product
         })
     })
 }
