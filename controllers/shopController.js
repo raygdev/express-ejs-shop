@@ -19,6 +19,12 @@ exports.getCartPage = (req, res, next) => {
     })
 }
 
+exports.postCart = (req,res,next) => {
+    const prodID = req.body.productId
+    console.log(prodID)
+    res.redirect('/cart')
+}
+
 exports.getCheckoutPage = (req,res,next) => {
     res.render('shop/checkout', {
         content: 'Checkout',

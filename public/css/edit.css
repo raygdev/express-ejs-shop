@@ -18,8 +18,10 @@
     'ebutton blank dbutton';
     grid-template-rows: repeat(3, 75px);
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid black;
-    padding: 1em;
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+    padding: 1.5em;
     margin-bottom: .75em;
     gap: 1rem
 }
@@ -36,20 +38,6 @@
 .price {
     grid-area: price;
     justify-self: center;
-}
-
-.grid .edit,
-.grid .delete {
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid white;
-    border-radius: 3px;
-    background-color: #593e72;
-    color: white;
-    font-weight: bold;
-    align-self: center;
-    padding: .25em .75em;
-
 }
 
 .edit{

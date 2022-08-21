@@ -14,8 +14,9 @@
             <h2><%= product.title %> </h2>
             <p class="description"><%= product.description %> </p>
             <p class="price"><%= product.price  %> </p>
-            <a class="details" href="/products/<%= product.id %>">Details</a>
-            <a class="add" href="/cart">Add To Cart</a>
+            <a class=" btn details" href="/products/<%= product.id %>">Details</a>
+            <!-- <a class="add" href="/cart">Add To Cart</a> -->
+            <%- include('../includes/add-to-cart', {product:product})  %>
         </div>
     <% }) %>  
 </div>  
